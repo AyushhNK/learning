@@ -1,0 +1,2 @@
+Today i learned about the function expression and its differences with the funcition statements.
+	I learned about the module and how to export it for other js files and how to require it and use in another javascript file.
