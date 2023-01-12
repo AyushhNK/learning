@@ -1,0 +1,3 @@
+Today i learned about global object in node js.
+Global object have global scope and can be accessed from any files.
+In browser there is window object which can acessed any variable with global scope but in node we have global object which do not.
