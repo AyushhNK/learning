@@ -1,3 +1,4 @@
+//using events and util module
 const events=require('events');
 const util=require('util');
 
@@ -5,7 +6,7 @@ var person=function(name){
 	this.name=name;
 };
 
-util.inherits(person,events.EventEmitter);
+util.inherits(person,events.EventEmitter);		//inherting person with EventEmitter
 
 var ayush=new person('ayush');
 var ram=new person('ram');
