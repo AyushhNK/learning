@@ -1,0 +1,2 @@
+ Today i learned about callback and promises in javascript .
+ 	I learned about the fs module to read and write data in file both synchronously and asynchronously.
