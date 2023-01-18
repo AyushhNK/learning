@@ -1,0 +1,3 @@
+Today i learned about the npm,
+package.json file
+and a little introduction to express and route params
