@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>my website</title>
+	<style type="text/css">
+		body{
+			background-color: aqua;
+			padding: 40px;
+		}
+		h1{
+			color:maroon;
+			font-size: 80px;
+			text-transform: uppercase;
+			text-align: center;
+		}
+		p{
+			font-size: 30px;
+			color:black;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>hello , i am <%=person%></h1>					//<%=...%> is used to add ejs
+	<p><strong>Age:<%=data.age%></strong></p>
+	<p><strong>Occupation:<%=data.occupation%></strong></p>
+</body>
+</html>
