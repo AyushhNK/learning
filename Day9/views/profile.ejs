@@ -5,7 +5,7 @@
 	<style type="text/css">
 		body{
 			background-color: aqua;
-			padding: 40px;
+			padding: 30px;
 		}
 		h1{
 			color:maroon;
@@ -13,7 +13,7 @@
 			text-transform: uppercase;
 			text-align: center;
 		}
-		p{
+		p,h2,ul{
 			font-size: 30px;
 			color:black;
 			text-align: center;
@@ -21,8 +21,16 @@
 	</style>
 </head>
 <body>
-	<h1>hello , i am <%=person%></h1>					//<%=...%> is used to add ejs
+	<h1>hello , i am <%=person%></h1>					
 	<p><strong>Age:<%=data.age%></strong></p>
 	<p><strong>Occupation:<%=data.occupation%></strong></p>
+	<h2>Hobbies:</h2>
+	<ul>
+	<% data.hobbies.forEach(function(view){ %>
+	
+		<li><%=view%></li>
+
+	<% }); %>
+	</ul>
 </body>
 </html>
