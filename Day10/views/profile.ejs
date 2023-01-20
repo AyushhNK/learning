@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>my website</title>
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+
+</head>
+<body>
+	<%-include('partials/nav.ejs')%>
+	<h1>hello , i am ayush</h1>					
+	<p><strong>Age:<%=data.age%></strong></p>
+	<p><strong>Occupation:<%=data.occupation%></strong></p>
+	<h2>Hobbies:</h2>
+	<ul>
+	<% data.hobbies.forEach(function(view){ %>
+	
+		<li><%=view%></li>
+
+	<% }); %>
+	</ul>
+</body>
+</html>
