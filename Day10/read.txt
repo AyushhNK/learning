@@ -1,0 +1,2 @@
+today i learned about middleware and how to add static pages in the server
+	and i also learned about query string and how to get data from the query string and add them in the form in the server
