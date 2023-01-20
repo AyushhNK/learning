@@ -7,6 +7,13 @@
 <body>
 	<%-include("partials/nav.ejs")%>
 	<h1>contact us</h1>
-	<p>coming soon</p>
+	<form>
+		<label for="who">who do you want to contact</label>
+		<input type="text" name="who" value="<%=qs.person%>">
+		<label for="department">which department</label>
+		<input type="text" name="department" value="<%=qs.depart%>">
+		<label for="email">Enter your email</label>
+		<input type="email" name="email">
+	</form>
 </body>
 </html>

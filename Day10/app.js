@@ -12,7 +12,8 @@ app.get('/profile',(req,res)=>{
 	res.render("profile",{data:data});	//rendering the data in profile.ejs in views folder
 });
 app.get('/contact',(req,res)=>{
-	res.render("contact");
+
+	res.render("contact",{qs:req.query});	//query string
 })
 app.listen(3000,()=>{
 	console.log('server running at port 3000');
