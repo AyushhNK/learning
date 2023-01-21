@@ -1,0 +1,16 @@
+body{
+	background-color: #f7c38b;
+	padding: 40px;
+}
+h1{
+	text-align: center;
+	text-transform: uppercase;
+	color: white;
+	font-size: 80px;
+}
+p{
+	text-align: center;
+	text-transform: uppercase;
+	color: black;
+	font-size: 40px;
+}
