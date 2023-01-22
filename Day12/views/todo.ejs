@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To-do list</title>
+	<link rel="stylesheet" type="text/css" href="assets/styles.css">
+</head>
+<body>
+	<div>
+	<h1>to-do list</h1>
+	<form method="POST" action="/todo">
+		<p>Enter in todo list</p>
+		<br>
+		<label for="todo"></label>
+		<input type="text" name="todo">
+		<input type="submit" name="submit">
+	</form>
+	<%for(i=0;i<=data.length;i++){%>
+		<p><%=data[i]%></p>
+	<%}%>
+	</div>
+</html>
