@@ -1,0 +1,2 @@
+Today i learned how to connect node js with mongodb with the help of mongoose
+  how to add data in the mongo db atlas how to find all the data in the database how to find the data with the id.
