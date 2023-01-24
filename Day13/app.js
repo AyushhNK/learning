@@ -6,7 +6,7 @@ const data=require('./data.js')
 const app=express();
 
 //connecting to the database
-const dbUrl='mongodb+srv://Ayush:Arianagrande55@cluster0.ymbuzeq.mongodb.net/node?retryWrites=true&w=majority';
+const dbUrl='mongodb+srv://Ayush:helloworld55@cluster0.ymbuzeq.mongodb.net/node?retryWrites=true&w=majority';
 mongoose.connect(dbUrl)
  .then((result)=>app.listen(3000))
  .catch((err)=>console.log(err));
