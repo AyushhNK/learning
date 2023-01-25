@@ -1,0 +1,47 @@
+//form in react
+<!DOCTYPE html>
+<html>
+<head>
+	<title>react-form</title>
+	<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  	<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+	<div id="container"></div>
+	<script type="text/babel">
+		var destination=document.querySelector("#container");
+		class App extends React.Component{
+		state={
+		name:"ayush",
+		age:20
+		}
+		changeHandler=(e)=>{
+		this.setState({
+		name:e.target.value
+	})
+
+	}
+		submitHandle=(e)=>{
+		e.preventDefault();
+		console.log("form submitted",this.state.name);
+		
+	}
+		render(){
+		return(
+		<div>
+			<h1>hello {this.state.name}</h1>
+			<form onSubmit={this.submitHandle}>
+				<input type="text" onChange={this.changeHandler}/>
+				<button type="submit">submit</button>
+			</form>
+		</div>
+		);
+	}
+	};
+	ReactDOM.render(<App/>,destination);
+
+	</script>
+
+</body>
+</html>
