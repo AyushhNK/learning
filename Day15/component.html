@@ -1,0 +1,34 @@
+creating a react component and adding a state to it
+<!DOCTYPE html>
+<html>
+<head>
+	<title>react-component</title>
+	<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  	<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+	<div id="container"></div>
+	<script type="text/babel">
+		var destination=document.querySelector("#container"); 
+		class Comp extends React.Component{
+		state={
+		name:"ayush",
+		age:20
+	}
+		render(){
+		return(
+		<div>
+		<h1>hello world</h1>
+		<p>hello my name is {this.state.name}.I am {this.state.age} years old</p>
+		</div>
+		);
+	}
+	};
+	ReactDOM.render(									
+			<Comp/>,
+		destination);
+	</script>
+
+</body>
+</html>
