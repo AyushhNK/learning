@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>react</title>
+	<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  	<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  	<style type="text/css">
+  		#container {
+		 padding: 50px;
+		 background-color: #EEE;
+		}
+		#container h1 {
+		 font-size: 48px;
+		 font-family: sans-serif;
+		 color: #0080A8;
+		}
+  	</style>
+
+</head>
+<body>
+	<div id="container"></div>
+	<script type="text/babel">
+		<!-- selecting the div with id container -->
+		var destination=document.querySelector("#container"); 
+		
+		<!-- render method takes two parameter first is 
+		The HTML-like elements (aka JSX) you wish to output
+		and The location in the DOM that React will render the JSX into -->
+		ReactDOM.render(									
+			<h1>hello world</h1>,
+		destination);
+	</script>
+
+</body>
+</html>
