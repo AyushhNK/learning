@@ -1,23 +1,18 @@
 import { useState } from 'react'
 import './App.css'
+import Navbar from './navbar';
+import Home from './home';
 
 function App() {
-  const [count, setCount] = useState(0)
-  const title="Welcome to the blog!!";
-  const likes=50;
-  {/*//objects are not valid in react
-    // const obj={name:"ayush",age:10}
-    // */}
-    const link="http://www.google.com";
-
 
   return (
     <div className="App">
+      <Navbar />
       <div className="content">
-        <h1>{title}</h1>
-        <p>{likes}</p>
-        <p>{Math.random()*10}</p>
-        <a href={link}>Google link</a>
+        <Home />
+        
+
+
 
 
       </div>
