@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import BlogList from './bloglist.jsx';
 
 const Home=()=>{
@@ -13,12 +13,19 @@ const Home=()=>{
 		setBlogs(newBlog);
 
 	}
+
+	const[name,setName]=useState('ayush');
 		
+	useEffect(()=>{
+		console.log("hello");
+	},[name]);
 
 	
 	return(
 		<div className="home">
 			<BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete}/>
+			<button onClick={()=>setName('ank')}>click me</button>
+			<p>{name}</p>
 
 		</div>
 		);
