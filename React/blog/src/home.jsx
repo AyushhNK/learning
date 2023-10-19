@@ -3,10 +3,7 @@ import BlogList from './bloglist.jsx';
 
 const Home=()=>{
 
-	const [blogs,setBlogs]=useState([
-		{body:"i am ayush",title:"ayushname",author:"ayush",id:0},
-		{body:"i am hari",title:"hariname",author:"hari",id:1},
-		{body:"i am sita",title:"sitaname",author:"sita",id:2}])
+	const [blogs,setBlogs]=useState(null)
 
 	const handleDelete=(id)=>{
 		const newBlog=blogs.filter(blog=>blog.id!=id);
@@ -14,18 +11,20 @@ const Home=()=>{
 
 	}
 
-	const[name,setName]=useState('ayush');
+
 		
 	useEffect(()=>{
-		console.log("hello");
-	},[name]);
+		fetch("http://localhost:8000/blogs").then(res=>{
+			return res.json();
+		}).then(data=>{
+			setBlogs(data)
+		});
+	},[]);
 
 	
 	return(
 		<div className="home">
-			<BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete}/>
-			<button onClick={()=>setName('ank')}>click me</button>
-			<p>{name}</p>
+			{blogs && <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete}/>}
 
 		</div>
 		);
