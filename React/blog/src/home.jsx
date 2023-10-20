@@ -4,13 +4,7 @@ import BlogList from './bloglist.jsx';
 const Home=()=>{
 
 	const [blogs,setBlogs]=useState(null)
-
-	const handleDelete=(id)=>{
-		const newBlog=blogs.filter(blog=>blog.id!=id);
-		setBlogs(newBlog);
-
-	}
-
+	const [isPending,setIsPending]=useState(true);
 
 		
 	useEffect(()=>{
@@ -18,13 +12,16 @@ const Home=()=>{
 			return res.json();
 		}).then(data=>{
 			setBlogs(data)
+			setIsPending(false);
 		});
 	},[]);
 
 	
 	return(
 		<div className="home">
-			{blogs && <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete}/>}
+			{isPending && <div>loading...</div>}
+			{blogs && <BlogList blogs={blogs} title="All Blogs"/>}
+			
 
 		</div>
 		);
